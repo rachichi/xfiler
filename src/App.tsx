@@ -7,6 +7,7 @@ import {
   trashPhotos,
   movePhotos,
 } from "./api";
+import { SiteFooter, SiteHeader } from "@rachichi/design";
 import Header from "./components/Header";
 import Gallery from "./components/Gallery";
 import Lightbox from "./components/Lightbox";
@@ -152,6 +153,7 @@ export default function App() {
 
   return (
     <>
+      <SiteHeader title="XFILER" theme="dark" />
       <Header
         year={year}
         total={photos.length}
@@ -174,6 +176,8 @@ export default function App() {
         onSelect={handleSelect}
         onView={setLightboxPhoto}
       />
+
+      <SiteFooter theme="dark" stack="react, typescript, python" />
 
       {lightboxPhoto && (
         <Lightbox
